@@ -27,7 +27,7 @@ const teamMembers = [
   //   aiHint: "professional woman"
   // },
   {
-    name: "Anjini",
+    name: "Mahankali Phani",
     role: "Developer",
     avatar: "https://picsum.photos/id/1019/200/200",
     aiHint: "creative woman"
