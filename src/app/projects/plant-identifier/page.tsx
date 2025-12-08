@@ -7,7 +7,7 @@ import Link from "next/link";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Project: FloraLens | Quantura',
+  title: 'Project: PlantLens | Quantura',
   description: 'An AI-powered plant identification tool that recognizes plants from leaf images, providing detailed information and care instructions.',
 };
 
@@ -25,7 +25,7 @@ export default function PlantIdentifierPage() {
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="space-y-4">
               <Badge variant="outline" className="text-primary border-primary">AI & Machine Learning</Badge>
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">FloraLens (Project Iota)</h1>
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">PlantLens</h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
                 An AI-powered plant identification tool that recognizes plants from leaf images, providing detailed information and care instructions. This project demonstrates our ability to apply AI to ecological and educational contexts.
               </p>
@@ -37,7 +37,7 @@ export default function PlantIdentifierPage() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="https://picsum.photos/550/401"
+                src="https://guangzhouflowershop.com/wp-content/uploads/2017/01/Tips-for-garden-flowers-and-plants.jpg"
                 data-ai-hint="plant identification app"
                 width={550}
                 height={400}
@@ -54,7 +54,7 @@ export default function PlantIdentifierPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Key Features</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
-                    Explore the powerful features of the FloraLens platform.
+                    Explore the powerful features of the PlantLens platform.
                 </p>
             </div>
             <div className="grid gap-8 md:grid-cols-3">

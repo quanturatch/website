@@ -22,8 +22,65 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
-    ],
+      {
+       protocol: 'https',
+        hostname: 'picsum.dev',
+        port: '',
+        pathname: '/**'
+      },
+       {
+       protocol: 'https',
+        hostname: 'watchandlearn.scholastic.com',
+        port: '',
+        pathname: '/**'
+      },
+      {
+       protocol: 'https',
+        hostname: 'guangzhouflowershop.com',
+        port: '',
+        pathname: '/**'
+      },
+      {
+       protocol: 'https',
+        hostname: 'dianova.in',
+        port: '',
+        pathname: '/**'
+      },
+      {
+       protocol: 'https',
+        hostname: 'thehansindia.com',
+        port: '',
+        pathname: '/**'
+      },
+      {
+       protocol: 'https',
+        hostname: 'fiverr-res.cloudinary.com',
+        port: '',
+        pathname: '/**'
+      },
+      {
+       protocol: 'https',
+        hostname: 'gorevity.com',
+        port: '',
+        pathname: '/**'
+      },
+      {
+       protocol: 'https',
+       hostname: 'acropolium.com',
+       port: '',
+       pathname: '/**'
+      },
+      {
+       protocol: 'https',
+       hostname: 'glinfotech.net',
+       port: '',
+       pathname: '/**'
+      },
+    ]
   },
 };
 
 export default nextConfig;
+
+
+//acropolium.com

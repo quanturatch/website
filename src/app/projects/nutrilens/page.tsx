@@ -1,3 +1,4 @@
+//D:\quantura_website\src\app\projects\nutrilens\page.tsx
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -55,7 +56,7 @@ export default function NutriLensPage() {
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="space-y-4">
               <Badge variant="outline" className="text-primary border-primary">AI & Machine Learning</Badge>
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">NutriLens (Project Alpha)</h1>
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">NutriLens</h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
                 An AI-powered nutrition analysis platform that provides instant, detailed nutritional information from a photo of a meal. This project showcases our expertise in building intelligent systems with practical, real-world applications.
               </p>
@@ -67,7 +68,7 @@ export default function NutriLensPage() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="https://picsum.photos/550/400"
+                src="https://picsum.dev/image/774/view"
                 data-ai-hint="nutrition analysis app interface"
                 width={550}
                 height={400}

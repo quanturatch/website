@@ -11,33 +11,77 @@ export const metadata: Metadata = {
 const services = [
   {
     icon: PenTool,
-    title: "Creative Design",
-    description: "Crafting stunning visuals that tell your story and captivate your audience. From branding to UI/UX, our creative team brings your vision to life.",
+    title: "AI & ML Development",
+    description: (
+      <>
+        Building <span className="font-semibold text-purple-600">intelligent systems</span> powered by 
+        <span className="font-semibold text-blue-600"> advanced machine learning</span>. From 
+        <span className="font-semibold text-emerald-600"> CC camera detection</span> and 
+        <span className="font-semibold text-emerald-600"> real-time pose analysis</span> to fully 
+        <span className="font-semibold text-primary"> custom AI model development</span>, 
+        we create smart solutions that enhance accuracy and unlock new capabilities.
+      </>
+    ),
   },
   {
     icon: Code,
     title: "Web Development",
-    description: "Building responsive, high-performance websites and applications for a seamless user experience across all devices. We use modern technologies to build for the future.",
+    description: (
+      <>
+        Building <span className="font-semibold text-primary">responsive</span>, 
+        <span className="font-semibold text-blue-600"> high-performance websites</span> and 
+        applications for a seamless user experience across all devices. We use 
+        <span className="font-semibold text-emerald-600"> modern technologies</span> to build for the future.
+      </>
+    ),
+  },
+  {
+    icon: Megaphone,
+    title: "App Development",
+    description: (
+      <>
+        Creating <span className="font-semibold text-blue-600">high-performance</span>, 
+        <span className="font-semibold text-primary"> user-friendly</span> mobile and web applications 
+        tailored to your business needs. We deliver 
+        <span className="font-semibold text-emerald-600"> scalable digital experiences</span> that drive results.
+      </>
+    ),
   },
   {
     icon: TrendingUp,
     title: "Digital Marketing",
-    description: "Driving growth and engagement with data-driven marketing strategies. Our services include SEO, SEM, content marketing, and social media management.",
-  },
-  {
-    icon: Megaphone,
-    title: "Brand Strategy",
-    description: "Developing powerful brand identities that resonate with your target audience. We help you define your message and position yourself for success.",
+    description: (
+      <>
+        Driving growth with 
+        <span className="font-semibold text-primary"> data-driven strategies</span>. 
+        Our services include <span className="font-semibold text-blue-600">SEO</span>, 
+        <span className="font-semibold text-purple-600"> SEM</span>, content marketing, and 
+        <span className="font-semibold text-emerald-600"> social media management</span>.
+      </>
+    ),
   },
   {
     icon: ShieldCheck,
     title: "Cybersecurity Consulting",
-    description: "Protecting your digital assets with robust security assessments, strategies, and implementation. We help you stay ahead of threats.",
+    description: (
+      <>
+        Protecting your digital assets with 
+        <span className="font-semibold text-primary"> robust security assessments</span> and strategies. 
+        We help you stay ahead of <span className="font-semibold text-red-600">cyber threats</span>.
+      </>
+    ),
   },
   {
     icon: Briefcase,
-    title: "Business Analytics",
-    description: "Transforming data into actionable insights. Our analytics services help you make informed decisions and uncover new opportunities for growth.",
+    title: "AI/ML Consulting",
+    description: (
+      <>
+        Empowering businesses with <span className="font-semibold text-primary">intelligent insights</span> 
+        and <span className="font-semibold text-purple-600">strategic AI guidance</span>.  
+        From model evaluation to <span className="font-semibold text-emerald-600">workflow automation</span>, 
+        we help you leverage machine learning to improve decision-making and unlock growth.
+      </>
+    ),
   },
 ];
 

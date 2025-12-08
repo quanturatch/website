@@ -1,11 +1,30 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, BarChart, Briefcase, Code, PenTool, ShieldCheck, Zap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { useState, useEffect } from "react";
+
+const heroImages = [
+  "/images/home.jpg",
+  "/images/home1.jpeg",
+  "/images/home2.png",
+];
+
+
+const randomImage = heroImages[Math.floor(Math.random() * heroImages.length)];
 
 export default function Home() {
+
+  const [randomImage, setRandomImage] = useState(heroImages[0]);
+
+  useEffect(() => {
+    const index = Math.floor(Math.random() * heroImages.length);
+    setRandomImage(heroImages[index]);
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       <section className="w-full py-20 md:py-32 lg:py-40 bg-background">
@@ -30,7 +49,7 @@ export default function Home() {
               </div>
             </div>
             <Image
-              src="/home.jpeg"
+              src={randomImage}
               width="600"
               height="400"
               alt="Hero"
@@ -133,10 +152,10 @@ export default function Home() {
           <div className="mx-auto grid gap-8 py-12 sm:grid-cols-1 lg:grid-cols-2 lg:max-w-6xl">
             <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="overflow-hidden">
-                    <Image src="https://picsum.photos/400/256" data-ai-hint="nutrition analysis app" alt="NutriLens Project" width={400} height={250} className="w-full object-cover transition-transform duration-300 hover:scale-105" />
+                    <Image src="/images/nutri.png" data-ai-hint="nutrition analysis app" alt="NutriLens Project" width={400} height={250} className="w-full object-cover transition-transform duration-300 hover:scale-105" />
                 </div>
                 <CardHeader>
-                    <CardTitle className="mt-2">NutriLens (Project Alpha)</CardTitle>
+                    <CardTitle className="mt-2">NutriLens</CardTitle>
                     <CardDescription>AI-Powered Nutrition Analysis Platform</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -150,11 +169,11 @@ export default function Home() {
             </Card>
             <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="overflow-hidden">
-                    <Image src="https://picsum.photos/400/257" data-ai-hint="mobile app interface" alt="Project 2" width={400} height={250} className="w-full object-cover transition-transform duration-300 hover:scale-105" />
+                    <Image src="/images/x-ray.png" data-ai-hint="mobile app interface" alt="Project 2" width={400} height={250} className="w-full object-cover transition-transform duration-300 hover:scale-105" />
                 </div>
                 <CardHeader>
-                    <CardTitle className="mt-2">Project Beta</CardTitle>
-                    <CardDescription>Cross-Platform Mobile Application</CardDescription>
+                    <CardTitle className="mt-2">RadixScan</CardTitle>
+                    <CardDescription>A sophisticated AI tool for analyzing X-ray images</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <p className="text-muted-foreground line-clamp-3">A sleek and intuitive mobile app for iOS and Android, designed to enhance customer engagement and streamline services.</p>

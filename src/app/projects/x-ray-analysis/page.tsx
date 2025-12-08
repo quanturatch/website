@@ -25,7 +25,7 @@ export default function XRayAnalysisPage() {
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="space-y-4">
               <Badge variant="outline" className="text-primary border-primary">Healthcare & AI</Badge>
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">RadixScan (Project Kappa)</h1>
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">RadixScan</h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
                 A sophisticated AI tool for analyzing X-ray images, assisting medical professionals in detecting anomalies and improving diagnostic accuracy. This project highlights our commitment to developing technology for critical sectors.
               </p>
@@ -37,7 +37,7 @@ export default function XRayAnalysisPage() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="https://picsum.photos/550/402"
+                src="https://assets.thehansindia.com/h-upload/2023/01/24/1331543-xry.jpg"
                 data-ai-hint="medical imaging interface"
                 width={550}
                 height={400}
