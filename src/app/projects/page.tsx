@@ -16,7 +16,7 @@ const projects = [
     slug: "nutrilens",
     title: "NutriLens (Project Alpha)",
     category: "AI & Machine Learning",
-    image: "https://picsum.photos/400/256",
+    image: "https://www.istockphoto.com/photo/group-of-healthy-food-for-flexitarian-diet-gm1457433817-492225403?utm_source=pixabay&utm_medium=affiliate&utm_campaign=sponsored_image&utm_content=srp_topbanner_media&utm_term=nutrition",
     aiHint: "nutrition analysis app",
     description: "An AI-powered nutrition analysis platform that provides instant, detailed nutritional information from a photo of a meal.",
   },
