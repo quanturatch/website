@@ -15,6 +15,7 @@ const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/projects", label: "Our Projects" },
   { href: "/news", label: "News" },
+  { href: "/education", label: "Education" },
 ];
 
 export default function Header() {

@@ -1,3 +1,6 @@
+//https://www.quanturatech.com/news ---- Remote
+// \quantura_website\src\app\news\page.tsx
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -21,15 +24,15 @@ const newsArticles = [
     aiHint: "artificial intelligence",
     excerpt: "Exploring the latest breakthroughs in AI and their impact on our world and the future of technology.",
   },
-  {
-    slug: "we-are-establishing",
-    title: "We Are Establishing Our New Branch",
-    date: "October 28, 2024",
-    category: "Company News",
-    image: "https://picsum.photos/400/251",
-    aiHint: "new office",
-    excerpt: "Quantura is excited to announce the opening of our new branch, expanding our reach and services to new horizons.",
-  },
+  // {
+  //   slug: "we-are-establishing",
+  //   title: "We Are Establishing Our New Branch",
+  //   date: "October 28, 2024",
+  //   category: "Company News",
+  //   image: "https://picsum.photos/400/251",
+  //   aiHint: "new office",
+  //   excerpt: "Quantura is excited to announce the opening of our new branch, expanding our reach and services to new horizons.",
+  // },
   {
     slug: "cutting-edge-cloud",
     title: "Embracing Cutting-Edge Cloud Computing",
@@ -57,15 +60,15 @@ const newsArticles = [
     aiHint: "green technology",
     excerpt: "Sustainability is no longer a buzzword but a business imperative. Explore how the tech industry is moving towards a greener future.",
   },
-  {
-    slug: "q3-earnings-report",
-    title: "Quantura Reports Record Growth in Q3",
-    date: "October 1, 2024",
-    category: "Company News",
-    image: "https://picsum.photos/400/255",
-    aiHint: "financial chart",
-    excerpt: "A look at our strong performance in the third quarter, highlighting key achievements and future outlook.",
-  },
+  // {
+  //   slug: "q3-earnings-report",
+  //   title: "Quantura Reports Record Growth in Q3",
+  //   date: "October 1, 2024",
+  //   category: "Company News",
+  //   image: "https://picsum.photos/400/255",
+  //   aiHint: "financial chart",
+  //   excerpt: "A look at our strong performance in the third quarter, highlighting key achievements and future outlook.",
+  // },
 ];
 
 export default function NewsPage() {

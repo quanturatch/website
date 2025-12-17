@@ -3,26 +3,40 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
-// In a real app, you would fetch this data based on the slug
+// ---------------- ARTICLE DATA ----------------
 const getArticleData = (slug: string) => {
-  // Mock data
-  const articles: { [key: string]: any } = {
+  const articles: Record<string, any> = {
     "new-ai-world": {
       title: "A New World of AI",
-      date: "November 2, 2024",
+      date: "December 2, 2025",
       author: "Jane Doe",
       category: "Industry Insights",
       image: "https://picsum.photos/1200/600",
       aiHint: "artificial intelligence brain",
+      body: (
+        <div className="prose prose-invert prose-lg max-w-none mx-auto text-foreground/90">
+          <p>
+            Artificial intelligence is reshaping industries by automating
+            workflows and enhancing decision-making across sectors.
+          </p>
+          <p>
+            Businesses adopting AI early are seeing improved efficiency and
+            faster innovation cycles.
+          </p>
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-primary">
+            A Deeper Dive
+          </h2>
+          <p>
+            From predictive analytics to generative AI, modern tools are
+            redefining how organizations operate.
+          </p>
+          <blockquote>
+            "AI will not replace humans, but humans using AI will replace those who don’t."
+          </blockquote>
+        </div>
+      ),
     },
-    "we-are-establishing": {
-      title: "We Are Establishing Our New Branch",
-      date: "October 28, 2024",
-      author: "John Smith",
-      category: "Company News",
-      image: "https://picsum.photos/1200/601",
-      aiHint: "modern office architecture",
-    },
+
     "cutting-edge-cloud": {
       title: "Embracing Cutting-Edge Cloud Computing",
       date: "October 24, 2024",
@@ -30,57 +44,148 @@ const getArticleData = (slug: string) => {
       category: "Technology",
       image: "https://picsum.photos/1200/602",
       aiHint: "cloud data center",
+      body: (
+        <div className="prose prose-invert prose-lg max-w-none mx-auto text-foreground/90">
+          <p>
+            Cloud computing has become the backbone of modern digital
+            infrastructure.
+          </p>
+          <p>
+            Organizations rely on cloud platforms for scalability, security, and
+            operational flexibility.
+          </p>
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-primary">
+            Key Cloud Benefits
+          </h2>
+          <p>
+            Reduced costs, high availability, and faster deployment drive cloud
+            adoption worldwide.
+          </p>
+          <blockquote>
+            "The cloud is not the future — it is the present."
+          </blockquote>
+        </div>
+      ),
     },
-     "remote-work-productivity": {
+
+    "remote-work-productivity": {
       title: "Maximizing Productivity in a Remote Work Environment",
       date: "October 20, 2024",
       author: "Bob Williams",
       category: "Productivity",
       image: "https://picsum.photos/1200/603",
       aiHint: "focused work home",
+      body: (
+        <div className="prose prose-invert prose-lg max-w-none mx-auto text-foreground/90">
+          <p>
+            Remote work offers flexibility, but productivity depends on
+            discipline and structure.
+          </p>
+          <p>
+            Clear communication and the right collaboration tools are critical
+            for success.
+          </p>
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-primary">
+            Productivity Strategies
+          </h2>
+          <p>
+            Time management, focus techniques, and healthy work boundaries help
+            remote teams thrive.
+          </p>
+          <blockquote>
+            "Productivity is less about time and more about focus."
+          </blockquote>
+        </div>
+      ),
     },
-    // Fallback article
-    "future-of-ai": {
-      title: "The Future of AI in Business",
-      date: "October 26, 2024",
-      author: "Jane Doe",
-      category: "Industry Insights",
-      image: "https://picsum.photos/1200/600",
-      aiHint: "business strategy future",
+
+    "sustainability-in-tech": {
+      title: "The Growing Importance of Sustainability in Tech",
+      date: "October 18, 2024",
+      author: "Emily Green",
+      category: "Sustainability",
+      image: "https://picsum.photos/1200/604",
+      aiHint: "green technology sustainability",
+      body: (
+        <div className="prose prose-invert prose-lg max-w-none mx-auto text-foreground/90">
+          <p>
+            Sustainability is becoming a core priority in the technology
+            industry.
+          </p>
+          <p>
+            Companies are investing in energy-efficient infrastructure and
+            eco-friendly practices.
+          </p>
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-primary">
+            Why Sustainability Matters
+          </h2>
+          <p>
+            Responsible innovation reduces environmental impact while improving
+            long-term business resilience.
+          </p>
+          <blockquote>
+            "Sustainability is not a trend — it is a responsibility."
+          </blockquote>
+        </div>
+      ),
     },
   };
-  return articles[slug] || articles['future-of-ai'];
+
+  return articles[slug] || articles["new-ai-world"];
 };
 
+// ---------------- METADATA ----------------
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const article = getArticleData(slug);
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const article = getArticleData(params.slug);
   return {
     title: `${article.title} | Quantura News`,
   };
 }
 
-
-export default function NewsArticlePage({ params }: { params: { slug: string } }) {
-  const article = getArticleData(params.slug);
+// ---------------- PAGE ----------------
+export default async function NewsArticlePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const article = getArticleData(slug);
 
   return (
     <article className="container max-w-4xl mx-auto py-12 px-4">
       <div className="mb-8">
-        <Link href="/news" className="inline-flex items-center text-accent hover:text-accent/80 transition-colors">
+        <Link
+          href="/news"
+          className="inline-flex items-center text-accent hover:text-accent/80 transition-colors"
+        >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to News
         </Link>
       </div>
 
       <header className="mb-8">
-        <Badge variant="outline" className="mb-4 text-primary border-primary">{article.category}</Badge>
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">{article.title}</h1>
+        <Badge
+          variant="outline"
+          className="mb-4 text-primary border-primary"
+        >
+          {article.category}
+        </Badge>
+
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+          {article.title}
+        </h1>
+
         <p className="text-muted-foreground">
           Published on {article.date} by {article.author}
         </p>
       </header>
-      
+
       <Image
         src={article.image}
         alt={article.title}
@@ -91,24 +196,8 @@ export default function NewsArticlePage({ params }: { params: { slug: string } }
         priority
       />
 
-      <div className="prose prose-invert prose-lg max-w-none mx-auto text-foreground/90">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.
-        </p>
-        <p>
-          Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam. Sorbi in justo.
-        </p>
-        <h2 className="text-2xl font-bold mt-8 mb-4 text-primary">A Deeper Dive</h2>
-        <p>
-          Fusce pellentesque suscipit nibh. Integer vitae libero ac risus egestas placerat. Vestibulum commodo felis quis tortor. Ut aliquam sollicitudin leo. Cras iaculis ultricies nulla. Sed quis magna. Phasellus accumsan sem. Ut nonummy, nisl vel sodales molestie, sem justo rhoncus justo, vitae pulvinar enim nunc eu purus. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.
-        </p>
-        <blockquote>
-          "The digital world is constantly evolving. The key is not just to keep up, but to anticipate what's next."
-        </blockquote>
-        <p>
-          Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
-        </p>
-      </div>
+      {/* Dynamic content per slug */}
+      {article.body}
     </article>
   );
 }
