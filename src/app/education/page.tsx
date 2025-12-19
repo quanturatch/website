@@ -50,6 +50,16 @@ const educationArticles = [
     excerpt:
       "Wellbeing is a subjective, psychological state that changes over time. Context also plays a crucial role so two children in the same class, who achieve the same marks, who even had the same breakfast, can experience very different levels of wellbeing.",
   },
+  {
+    title: "FREE:Certified Phishing Prevention Specialist",
+    date: "2025-12-19",
+    author: "Hack and Fix",
+    category: "Edtech",
+    image: "/images/CPPS-cover.png",
+    url: "https://academy.hackandfix.com/courses-archive/certified-phishing-prevention-specialist/",
+    excerpt:
+      "Certified Phishing Prevention Specialist (CPPS), demonstrating their proficiency in safeguarding organizational and personal data against phishing attacks.Wellbeing is a subjective, psychological state that changes over time. Context also plays a crucial role so two children in the same class, who achieve the same marks, who even had the same breakfast, can experience very different levels of wellbeing.",
+  },
 ];
 
 export default function EducationPage() {
