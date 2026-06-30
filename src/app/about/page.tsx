@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 
 const teamMembers = [
   {
-    name: "Kiran Kumar.N",
+    name: "Rajyalakshmi.N",
     role: "Chief Executive Officer",
     avatar: "https://picsum.photos/id/1015/200/200",
-    aiHint: "professional man"
+    aiHint: "professional woman"
   },
   {
     name: "Naresh.V",
@@ -27,10 +27,10 @@ const teamMembers = [
   //   aiHint: "professional woman"
   // },
   {
-    name: "Mahankali Phani",
+    name: "N.K.V.Harshavardhan",
     role: "Developer",
     avatar: "https://picsum.photos/id/1019/200/200",
-    aiHint: "creative woman"
+    aiHint: "creative man"
   },
 ];
 
