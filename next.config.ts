@@ -54,6 +54,12 @@ const nextConfig: NextConfig = {
       },
       {
        protocol: 'https',
+        hostname: 'assets.thehansindia.com',
+        port: '',
+        pathname: '/**'
+      },
+      {
+       protocol: 'https',
         hostname: 'fiverr-res.cloudinary.com',
         port: '',
         pathname: '/**'

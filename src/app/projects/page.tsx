@@ -67,8 +67,8 @@ export default function ProjectsPage() {
     <>
       <section 
         className="w-full py-20 md:py-32 lg:py-40 bg-cover bg-center bg-no-repeat relative"
-        style={{ backgroundImage: "url('https://picsum.photos/1920/1083?blur=2&grayscale')" }}
-        data-ai-hint="project blueprint"
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1920&q=80')" }}
+        data-ai-hint="tech workspace developer"
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="container px-4 md:px-6 relative">
