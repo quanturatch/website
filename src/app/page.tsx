@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { Analytics } from "@vercel/analytics/next"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Scale, MessageCircle, MapPin, Store, Zap, ShieldCheck, Briefcase, Code } from "lucide-react";
 import Link from "next/link";
