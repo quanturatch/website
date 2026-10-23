@@ -22,19 +22,19 @@ const products = [
   {
     icon: MessageCircle,
     title: "WhatsApp Status Saver",
-    description: "Save WhatsApp statuses from your contacts seamlessly \u2014 photos, videos, and text statuses, all with a single tap.",
+    description: "Save WhatsApp statuses from your contacts seamlessly photos, videos, and text statuses, all with a single tap.",
     href: "/products#whatsapp-status-saver",
   },
   {
     icon: MapPin,
     title: "ByKm",
-    description: "Your neighbourhood app to find everything within 15km \u2014 grocery stores, house rentals, sales, and local services from your current location.",
+    description: "Your neighbourhood app to find everything within 15km grocery stores, house rentals, sales, and local services from your current location.",
     href: "/products#bykm",
   },
   {
     icon: Store,
     title: "Town Trade",
-    description: "An exclusive marketplace for local shops and vendors to sell products, showcase house rentals and sales \u2014 connecting your community.",
+    description: "An exclusive marketplace for local shops and vendors to sell products, showcase house rentals and sales connecting your community.",
     href: "/products#town-trade",
   },
 ];
@@ -87,7 +87,7 @@ export default function Home() {
                   it.
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl leading-relaxed">
-                  We solve real-world problems by building simple, powerful software \u2014 products that are elegant, dependable and built to scale.
+                  We solve real-world problems by building simple, powerful software products that are elegant, dependable and built to scale.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -159,7 +159,7 @@ export default function Home() {
               <Badge variant="outline">Our Products</Badge>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What We Build</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Purpose-built products that solve real problems \u2014 from legal tech to hyperlocal discovery.
+                Purpose-built products that solve real problems from legal tech to hyperlocal discovery.
               </p>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function Home() {
               <Badge>Get in Touch</Badge>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Let&apos;s Build Something Together</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Tell us about your project \u2014 we&apos;ll get back to you shortly.
+                Tell us about your project we&apos;ll get back to you shortly.
               </p>
             </div>
             <Button asChild size="lg" className="mt-4 bg-accent hover:bg-accent/90">
