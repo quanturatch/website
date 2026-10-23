@@ -71,7 +71,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>6-134, Seetharam Puram, Jaggaiahpet, AP</li>
               <li>contact@quantura.com</li>
-              <li>9490371113</li>
+              <li>9494037782</li>
             </ul>
           </div>
         </div>
