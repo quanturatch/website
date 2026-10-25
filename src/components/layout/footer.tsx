@@ -62,6 +62,11 @@ export default function Footer() {
                   Projects
                 </Link>
               </li>
+              <li>
+                <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -78,9 +83,17 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-border/40 pt-8 md:flex-row">
-          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            &copy; {new Date().getFullYear()} Quantura Technologies. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center md:text-left">
+            <p className="text-sm leading-loose text-muted-foreground">
+              &copy; {new Date().getFullYear()} Quantura Technologies. All rights reserved.
+            </p>
+            <Link
+              href="/privacy"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors underline-offset-4 hover:underline"
+            >
+              Privacy Policy
+            </Link>
+          </div>
           <div className="flex items-center gap-4">
             <Link href="#" prefetch={false}>
               <Twitter className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
